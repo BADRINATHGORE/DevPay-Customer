@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPay – Digital Banking Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --primary: #2c5364;
+            --secondary: #203a43;
+            --dark: #0f2027;
+            --accent: #3498db;
+            --bg: #f4f7f9;
+            --white: #ffffff;
+            --text: #334155;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        /* --- Header --- */
+        
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--secondary), var(--primary));
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 10px;
+        }
+        /* --- Layout --- */
+        
+        section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+        }
+        
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        /* --- PROPER VIDEO STYLING --- */
+        
+        .video-outer-container {
+            width: 100%;
+            max-width: 900px;
+            /* Limits size on desktop */
+            margin: 0 auto;
+        }
+        
+        .video-aspect-box {
+            position: relative;
+            width: 100%;
+            /* 16:9 Aspect Ratio (Industry Standard) */
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border: 6px solid var(--white);
+            /* Gives it a "Screen" frame look */
+        }
+        
+        .video-aspect-box video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            /* Ensures the whole video is visible */
+        }
+        /* --- Table --- */
+        
+        .table-scroll {
+            width: 100%;
+            max-height: 350px;
+            overflow-y: auto;
+            border-radius: 12px;
+            border: 1px solid #edf2f7;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #edf2f7;
+        }
+        /* --- Tech Tags --- */
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .tech-tags li {
+            background: #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .btn-download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .btn-download:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        /* Responsive Grid */
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        @media (max-width: 600px) {
+            .video-aspect-box {
+                border-radius: 12px;
+                border: 3px solid var(--white);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DevPay</h1>
+        <p>Secure Digital Banking Application – Project (Ongoing)</p>
+    </header>
+
+    <section>
+        <div class="card">
+            <h2 class="section-title">Project Overview</h2>
+            <p>DevPay is an ongoing digital banking application developed as an academic project to demonstrate real-world banking functionalities. The system includes a customer mobile application and a bank/admin web panel, focusing on secure authentication,
+                account management, and transaction handling.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" style="text-align: center;">Project Demo Video</h2>
+        <div class="video-outer-container">
+            <div class="video-aspect-box">
+                <video controls>
+                    <source src="Others/devpay.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-grid">
+        <div class="card">
+            <h3>Dummy Customer Login</h3>
+            <p style="font-size: 0.8rem; color: #667; margin-bottom: 15px;">Credentials for testing purposes:</p>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>PIN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>devP122</td>
+                            <td>123456</td>
+                        </tr>
+                        <tr>
+                            <td>devP123</td>
+                            <td>234567</td>
+                        </tr>
+                        <tr>
+                            <td>devP111</td>
+                            <td>111111</td>
+                        </tr>
+                        <tr>
+                            <td>devP125</td>
+                            <td>456789</td>
+                        </tr>
+                        <tr>
+                            <td>devP126</td>
+                            <td>567890</td>
+                        </tr>
+                        <tr>
+                            <td>devP127</td>
+                            <td>678901</td>
+                        </tr>
+                        <tr>
+                            <td>devP128</td>
+                            <td>789012</td>
+                        </tr>
+                        <tr>
+                            <td>devP129</td>
+                            <td>111111</td>
+                        </tr>
+                        <tr>
+                            <td>devP130</td>
+                            <td>901234</td>
+                        </tr>
+                        <tr>
+                            <td>devP131</td>
+                            <td>012345</td>
+                        </tr>
+                        <tr>
+                            <td>devP132</td>
+                            <td>112233</td>
+                        </tr>
+                        <tr>
+                            <td>devP133</td>
+                            <td>223344</td>
+                        </tr>
+                        <tr>
+                            <td>devP134</td>
+                            <td>334455</td>
+                        </tr>
+                        <tr>
+                            <td>devP135</td>
+                            <td>445566</td>
+                        </tr>
+                        <tr>
+                            <td>devP136</td>
+                            <td>556677</td>
+                        </tr>
+                        <tr>
+                            <td>devP137</td>
+                            <td>667788</td>
+                        </tr>
+                        <tr>
+                            <td>devP138</td>
+                            <td>778899</td>
+                        </tr>
+                        <tr>
+                            <td>devP139</td>
+                            <td>889900</td>
+                        </tr>
+                        <tr>
+                            <td>devP140</td>
+                            <td>990011</td>
+                        </tr>
+                        <tr>
+                            <td>devP141</td>
+                            <td>101112</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">
+                <h3>Download App</h3>
+                <p>Get the latest DevPay APK for demo purposes.</p>
+                <a href="Others/devpay.apk" download class="btn-download">Download APK</a>
+                <p style="font-size: 11px; margin-top: 10px; color: #e53e3e;">*Enable "Install from Unknown Sources"</p>
+            </div>
+
+            <div class="card">
+                <h3>Technology Stack</h3>
+                <ul class="tech-tags">
+                    <li>Java & Android</li>
+                    <li>HTML, CSS, JS</li>
+                    <li>REST APIs</li>
+                    <li>Oracle / SQL</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 DevPay Project | Developed by <strong>Badrinath Gore</strong></p>
+    </footer>
+
+</body>
+
+</html>
